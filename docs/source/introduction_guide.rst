@@ -148,7 +148,7 @@ Lightning operates on pure dataloaders. Here's the PyTorch code for loading MNIS
                                   transforms.Normalize((0.1307,), (0.3081,))])
 
     # data
-    mnist_train = MNIST(os.getcwd(), train=True, download=True)
+    mnist_train = MNIST(os.getcwd(), train=True, download=True, transform=transform)
     mnist_train = DataLoader(mnist_train, batch_size=64)
 
 .. testoutput::
